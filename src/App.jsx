@@ -1,7 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './index.css'
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -11,14 +8,22 @@ import Col from 'react-bootstrap/Col';
 function App() {
   return (
     <>
+    <nav className="nav-main">
+      <ul>
+        <li>port</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+      </ul>
+    </nav>
     <header className="header-main">
       <Container>
       <p>here's the header</p>
       </Container>
     </header>
-    <section className="intro">
-    <Container>
-      <p>here's the intro</p>
+    <section className="section-intro">
+      <Container>
+        <p>here's the intro</p>
       </Container>
     </section>
 
