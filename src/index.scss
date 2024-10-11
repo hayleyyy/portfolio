@@ -1,4 +1,4 @@
-$color-dkgreen: #306b2e;
+$color-dkgreen: #426130;
 $color-ltgreen: #8dda5a;
 $color-beige: #f5efd5;
 $color-offblack: #2d332d;
@@ -10,13 +10,20 @@ $color-yellow: #f5f851;
 
 body {
   background-color: $color-beige;
+  font-family: "Teachers", serif;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-font-smoothing: antialiased;
+  // -o-font-smoothing: antialiased;
 }
 
 .nav-main {
-  background-color: $color-offblack;
+  // background-color: $color-offblack;
   color: $color-beige;
+  position: absolute;
+  top: 0;
+  right: 0;
   ul {
-    list-style: none;   
+    list-style: none;
     padding: 0;
     margin: 0;
     li {
@@ -27,23 +34,138 @@ body {
 }
 
 .header-main {
-  background-color: $color-ltgreen;
-  min-height: 500px;
-  background-image: url('/header-1.jpg');
-  background-size: cover;
+  // background-color: $color-ltgreen;
+  height: 100dvh;
+  min-height: 850px;
+  background-image: url("/header-bg.jpg");
+  background-size: 2600px;
+  background-repeat: no-repeat;
+  background-position: center -180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h1.jumbo {
+    font-family: "Literata", arial;
+    font-size: 13rem;
+    font-weight: 900;
+    color: #eacd59;
+    opacity: 0.9;
+    text-align: center;
+    mix-blend-mode: hard-light;
+    span {
+      display: block;
+    }
+  }
 }
 
 .section-intro {
-  min-height: 200px;
+  color: rgb(246, 255, 236);
+  font-size: 18px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
   background-color: $color-dkgreen;
+  position: relative;
+  padding-top: 50px;
+
+  .intro-text-container {
+    // border: 1px solid blue;
+    position: relative;
+  }
+  .intro-text {
+    position: relative;
+    z-index: 9999;
+    //  border: 1px solid red;
+    letter-spacing: 0.5px;
+  }
+  .hello {
+    position: absolute;
+    top: -65px;
+    height: 100px;
+    // border: 1px solid red;
+    font-family: "Neonderthaw", arial;
+    font-size: 4rem;
+    color: #628630;
+  }
+  .help-you-container {
+    position: relative;
+  }
+  .help-you {
+    font-size: 5rem;
+    color: #fff;
+    display: block;
+    position: absolute;
+    width: 200px;
+    left: calc(50% - 100px);
+    top: -150px;
+  }
+}
+
+.examples-intro {
+  // background-color: $color-ltgreen;
+  height: 500px;
+  min-height: 770px;
+  background-image: url("/intro-bg.jpg");
+  background-size: 2600px;
+  background-repeat: no-repeat;
+  background-position: center -90px;
 }
 
 .example {
   min-height: 400px;
-  border: 1px solid #ccc;
+  border: 1px solid #26f51f;
   display: flex;
+  &-description {
+    font-size: 2rem;
+  }
+  img {
+    max-width: 100%;
+    max-height: 500px;
+  }
+  > div > div {
+    height: 100%;
+    border: 1px solid red;
+    > div {
+      border: 1px solid blue;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        position: relative;
+        z-index: 9999;
+      }
+    }
+  }
 }
 
+.examples-one,
+.examples-three {
+  .blob {
+    position: absolute;
+    top: calc(50% - 175px);
+    left: -50px;
+
+    width: auto;
+  }
+}
+
+.examples-two,
+.examples-four {
+  .blob {
+    position: absolute;
+    top: calc(50% - 175px);
+    right: -50px;
+    height: 350px;
+    width: auto;
+  }
+}
+.examples-one {
+  color: #4b320c;
+}
 .section-process {
   min-height: 200px;
 }
@@ -54,4 +176,23 @@ body {
 
 .footer-main {
   height: 100px;
+}
+
+.examples-three {
+  background-color: #c69d4d;
+}
+.examples-two {
+  background-color: #7c8a2f;
+}
+.examples-four {
+  background-color: #94bdca;
+}
+.examples-one {
+  background-color: #e9c476;
+}
+
+.section-about {
+  img {
+    max-width: 100%;
+  }
 }
