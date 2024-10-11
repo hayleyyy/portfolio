@@ -3,6 +3,10 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+// React
+import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
+import PortfolioExamples from "./PortfolioSection";
 
 function App() {
   return (
@@ -16,12 +20,18 @@ function App() {
             <li>item</li>
           </ul>
         </nav>
+<motion.div
+  initial={{ opacity: 0.1 }}
+  whileInView={{ opacity: 0.9 }}
+  transition={{ delay: 1, duration: 1 }}
+  viewport={{ amount: 0.2 }}
+  style={{ mixBlendMode: 'hard-light' }}>
 
         <h1 className="jumbo">
           <span>let's create</span>
           <span>something</span>
           <span>together</span>
-        </h1>
+        </h1></motion.div>
       </header>
       <section className="section-intro">
         <Container>
@@ -29,107 +39,32 @@ function App() {
             <Col xs="10" lg="4">
               <div class="intro-text-container">
                 <p class="intro-text">
-                  Nausicaä glided over the Sea of Corruption, her hands gently
-                  guiding the glider through the winds, as the Ohmu watched from
-                  below. Beneath her, the forest breathed with ancient wisdom, a
-                  quiet hum that only the old souls could hear. Totoro sat
-                  beneath the great camphor tree, his soft belly rising and
-                  falling with each deep breath.
+                  I'm Hayley, and I'm a multi-disciplinary web specialist. 
+                  I love to create interactive and unique experiences that tell a story.
                 </p>
                 <div className="hello">hey there!</div>
               </div>
             </Col>
             <Col xs="10" lg="4">
               <p class="intro-text">
-                The Catbus purred as it rested beside him, its wide eyes
-                blinking slowly as it awaited the next call. The wind blew
-                through the leaves, carrying the faint sound of laughter from
-                the children who had long since drifted to sleep. Everything was
-                calm, as if the world outside was but a dream.
+                UI and UX design. Graphic design. Interaction design. And from my experience as a front-end developer, I'm confident I can bring these designs to life.
               </p>
             </Col>
             <Col xs="2" lg="4">
-              <div class="help-you-container">
+            <motion.div
+             initial={{ y: 20, opacity: 0.5 }}    // Start off-screen (lower) and transparent
+             whileInView={{ y: -20, opacity: 1 }} // Transition to original position and full opacity
+             transition={{ duration: 5 }}     // Control the speed of the animation
+             viewport={{ once: false }}          // Trigger the animation once when in view
+           ><div class="help-you-container">
                 <span class="help-you">How can I help you?</span>
-              </div>
+              </div></motion.div>
             </Col>
           </Row>
         </Container>
       </section>
 
-      <section className="section-examples">
-        <div className="examples-intro"></div>
-
-        <div className="example examples-one">
-          <Container>
-            <Row>
-              <Col md="4">
-                <img className="blob" src="./blobs1.png"></img>
-                <p className="example-description">
-                  Nausicaä glided over the Sea of Corruption, her hands gently
-                  guiding the glider through the winds.
-                </p>
-              </Col>
-              <Col md="8">
-                <img src="./macarons.jpeg"></img>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-
-        <div className="example examples-two">
-          <Container>
-            <Row>
-              <Col md="8">
-                <img src="./flowers.jpeg"></img>
-              </Col>
-              <Col md="4">
-                <img className="blob" src="./blobs2.png"></img>
-                <p className="example-description">
-                  Nausicaä glided over the Sea of Corruption, her hands gently
-                  guiding the glider through the winds.
-                </p>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-
-        <div className="example examples-three">
-          <Container>
-            <Row>
-              <Col md="4">
-                <img className="blob" src="./blobs4.png"></img>
-                <p className="example-description">
-                  Nausicaä glided over the Sea of Corruption, her hands gently
-                  guiding the glider through the winds.
-                </p>
-              </Col>
-              <Col md="8">
-                {" "}
-                <img src="./packaging.jpeg"></img>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-
-        <div className="example examples-four">
-          <Container>
-            <Row>
-              <Col md="8">
-                {" "}
-                <img src="./citrus.jpeg"></img>
-              </Col>
-              <Col md="4">
-                <img className="blob" src="./blobs4.png"></img>
-                <p className="example-description">
-                  Nausicaä glided over the Sea of Corruption, her hands gently
-                  guiding the glider through the winds.
-                </p>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      </section>
+<PortfolioExamples></PortfolioExamples>
 
       <section className="section-process">
         <Container>
