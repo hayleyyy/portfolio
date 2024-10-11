@@ -26,7 +26,7 @@ function App() {
       <section className="section-intro">
         <Container>
           <Row>
-            <Col lg="4">
+            <Col xs="10" lg="4">
               <div class="intro-text-container">
                 <p class="intro-text">
                   Nausicaä glided over the Sea of Corruption, her hands gently
@@ -39,7 +39,7 @@ function App() {
                 <div className="hello">hey there!</div>
               </div>
             </Col>
-            <Col lg="4">
+            <Col xs="10" lg="4">
               <p class="intro-text">
                 The Catbus purred as it rested beside him, its wide eyes
                 blinking slowly as it awaited the next call. The wind blew
@@ -48,7 +48,7 @@ function App() {
                 calm, as if the world outside was but a dream.
               </p>
             </Col>
-            <Col lg="4">
+            <Col xs="2" lg="4">
               <div class="help-you-container">
                 <span class="help-you">How can I help you?</span>
               </div>
